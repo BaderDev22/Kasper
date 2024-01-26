@@ -578,11 +578,480 @@ header nav .form i {
     border: none;
 }
 
+/*-----------------------------------*\
+  ABOUT
+\*-----------------------------------*/
+.about {
+    padding-top: var(--section-padding);
+    overflow: hidden;
+    text-align: center;
+}
+
+.about .image img {
+    max-width: 100%;
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+}
+
+@media (max-width: 767px) {
+    .about .image img {
+        bottom: -60px;
+        margin-top: -60px;
+    }
+}
+
+/*-----------------------------------*\
+  STATUS
+\*-----------------------------------*/
+.status {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(images/stats.png);
+    background-size: cover;
+    position: relative;
+}
+
+.status::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+}
+
+.status .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.status .container .box {
+    padding: 50px;
+    background-color: var(--transparent-color);
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .status .container .box {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .status .container .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .status .container .box {
+        flex-basis: 25%;
+    }
+}
+
+.status .container .box i {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+}
+
+.status .container .box .number {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.status .container .box p {
+    font-size: 14px;
+}
+
+/*-----------------------------------*\
+  SKILLS
+\*-----------------------------------*/
+.skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.skills .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+    .skills .container > div {
+        flex-basis: 45%;
+    }
+}
+
+.skills .container > div > h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.skills .container > div > p {
+    text-align: center;
+    line-height: 2;
+    color: var(--secondary-color);
+    margin-bottom: 90px;
+}
+
+.skills .testimonials img {
+    border-style: none;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.skills .testimonials .content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.skills .testimonials .content .text {
+    line-height: 1.7;
+    border-bottom: 1px solid #ccc;
+}
+
+.skills .testimonials .content .text p {
+    font-size: 14px;
+    text-align: right;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.skills .testimonials .bullets {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.skills .testimonials .bullets li {
+    width: 14px;
+    height: 14px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.skills .testimonials .bullets li.active {
+    border: none;
+    background-color: var(--main-color);
+}
+
+.skills .our-skills {}
+
+.skills .our-skills .prog-holder {
+    margin-bottom: 40px;
+}
+
+.skills .our-skills .prog-holder h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.skills .our-skills .prog-holder .prog {
+    height: 30px;
+    background-color: #ddd;
+}
+
+.skills .our-skills .prog-holder .prog span {
+    display: block;
+    height: 100%;
+    position: relative;
+    background-color: var(--main-color);
+}
+
+.skills .our-skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    top: -38px;
+    right: -15px;
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    width: 40px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.skills .our-skills .prog-holder .prog span::after {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    top: -12px;
+    right: -5px;
+}
+
+/*-----------------------------------*\
+  QUOTE
+\*-----------------------------------*/
+.quote {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(images/quote.jpg);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.quote::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.719);
+}
+
+.quote .container {
+    position: relative;
+}
+
+.quote .container p {
+    position: relative;
+    font-size: 29px;
+}
+
+.quote .container p::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    content: "\f10e";
+}
+
+.quote .container p::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    content: "\f10e";
+}
+
+.quote .container span {
+    margin: 20px auto;
+
+}
+
+/*-----------------------------------*\
+  PRICING
+\*-----------------------------------*/
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.pricing .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pricing .plans .plan{
+    background-color: #fcfcfc;
+    text-align: center;
+}
+
+.pricing .plans .plan .head {
+    padding: 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .plans .plan .head h4 {
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.pricing .plans .plan .head span {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.pricing .plans .plan .head span::before {
+    content: "$";
+    position: relative;
+    font-size: 26px;
+    font-weight: normal;
+    margin-right: 15px;
+    top: -40px;
+}
+
+.pricing .plans .plan .head span::after {
+    content: "/Mo";
+    position: relative;
+    font-size: 20px;
+    right: -15px;
+
+}
+
+.pricing .plans .plan ul {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .plans .plan ul li {
+    padding: 20px;
+    position: relative;
+} 
+
+.pricing .plans .plan ul li::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 1px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+} 
+
+.pricing .plans .plan .foot a {
+    display: block;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    padding: 20px;
+    width: fit-content;
+    margin: 30px auto;
+}
+
+.pricing .contact {
+    margin: 60px;
+    text-align: center;
+}
+
+.pricing .contact p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.pricing .contact a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    font-size: 19px;
+    background-color: var(--main-color);
+    color: white;
+    width: fit-content;
+    margin: auto;
+}
+
+
+
+/*-----------------------------------*\
+  SUBSCRIBE
+\*-----------------------------------*/
+.subscribe {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.subscribe::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+}
+
+.subscribe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+    .subscribe p {
+        margin: 30px 0 0;
+    }
+}
+
+.subscribe form {
+    position: relative;
+    display: flex;
+    width: 500px;
+    max-width: 100%;
+
+}
+
+.subscribe form::placeholder {
+    color: white;
+}
+
+.subscribe form i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+.subscribe form input[type="email"] {
+    padding: 20px 20px 20px 60px;
+    background: none;
+    border: 1px solid white;
+    border-right: none;
+    width: calc(100% - 130px);
+    color: white;
+    caret-color: var(--main-color);
+}
+
+.subscribe form input[type="submit"] {
+    padding: 20px;
+    background-color: var(--main-color);
+    border: 1px solid white;
+    border-left: none;
+    color: white;
+    width: 130px;
+}
+
+.subscribe p {
+    line-height: 1.7;
+    margin-left: 50px;
+}
 
 
 
 
 
+
+
+
+/*-----------------------------------*\
+
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  
+\*-----------------------------------*/
+
+/*-----------------------------------*\
+  
+\*-----------------------------------*/
 
 /*-----------------------------------*\
   
